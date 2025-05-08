@@ -1,20 +1,41 @@
 class myStack:
   #Please read sample.java file before starting.
   #Kindly include Time and Space complexity at top of each file
+  #Time Complexity:
+  #Push: O(1)
+  #Pop: O(1)
+  #Peek: O(1)
+  #isEmpty: O(1)
+  #Size: O(1)
+  #Show: O(n)
+
+  #Space Complexity:
+  #O(n) To store n number of elements in the stack
      def __init__(self):
-         
+      self.stack = []
+
      def isEmpty(self):
+      return len(self.stack) == 0
          
      def push(self, item):
+      self.stack.append(item)
          
      def pop(self):
+      if self.isEmpty():
+        raise IndexError("Stack is empty Can't pop out")
+      return self.stack.pop()
         
         
      def peek(self):
+      if self.isEmpty():
+        raise IndexError("Stack is empty No items to return")
+      return self.stack[-1]
         
      def size(self):
+      return len(self.stack)
          
      def show(self):
+      return self.stack.copy()
          
 
 s = myStack()
