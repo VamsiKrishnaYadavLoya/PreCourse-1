@@ -12,30 +12,30 @@ class myStack:
   #Space Complexity:
   #O(n) To store n number of elements in the stack
      def __init__(self):
-      self.stack = []
+      self.stack = [] #Stack initialization as List
 
      def isEmpty(self):
-      return len(self.stack) == 0
+      return len(self.stack) == 0 #returns True if stack is empty
          
      def push(self, item):
-      self.stack.append(item)
+      self.stack.append(item) #Adding the item on top of the stack
          
      def pop(self):
       if self.isEmpty():
         raise IndexError("Stack is empty Can't pop out")
-      return self.stack.pop()
+      return self.stack.pop() #Remove and return the items on top of the stack
         
         
      def peek(self):
       if self.isEmpty():
         raise IndexError("Stack is empty No items to return")
-      return self.stack[-1]
+      return self.stack[-1] #Just returning top item with removing
         
      def size(self):
-      return len(self.stack)
+      return len(self.stack) #Number of elements in the stack
          
      def show(self):
-      return self.stack.copy()
+      return self.stack.copy() #Returning a copy of entire stack
          
 
 s = myStack()
